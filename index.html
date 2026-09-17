@@ -8,8 +8,15 @@
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>Lineups</title>
-    <script type="module" crossorigin src="./assets/index-UZpgj_NZ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DN92FKrg.css">
+    <script>
+      // Apply a forced theme before the first paint (src/app/theme.ts), so it never flashes the other one.
+      try {
+        var theme = localStorage.getItem('lineups-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-DbbOC85W.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-0aJIo-Fd.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body>
     <div id="root"></div>
