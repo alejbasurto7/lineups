@@ -1,15 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <!-- Full-bleed background so the same art works as a maskable icon: the pitch stays inside the safe circle. -->
-  <rect width="512" height="512" fill="#15803d"/>
-  <g fill="none" stroke="#ffffff" stroke-width="14">
-    <rect x="136" y="96" width="240" height="320" rx="16"/>
-    <line x1="136" y1="256" x2="376" y2="256"/>
-    <path d="M206 416v-44h100v44"/>
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#2e7d32"/>
+  <!-- Mowing stripes -->
+  <g fill="#388e3c">
+    <rect y="32" width="512" height="64"/>
+    <rect y="160" width="512" height="64"/>
+    <rect y="288" width="512" height="64"/>
+    <rect y="416" width="512" height="64"/>
   </g>
-  <g fill="#ffffff">
-    <circle cx="256" cy="160" r="24"/>
-    <circle cx="190" cy="256" r="24"/>
-    <circle cx="322" cy="256" r="24"/>
-    <circle cx="256" cy="330" r="24"/>
+  <rect width="512" height="512" fill="url(#shade)"/>
+  <!-- Pitch markings -->
+  <g fill="none" stroke="#ffffff" stroke-width="10" stroke-linejoin="round">
+    <rect x="136" y="96" width="240" height="320" rx="10"/>
+    <line x1="136" y1="256" x2="376" y2="256"/>
+    <circle cx="256" cy="256" r="38"/>
+    <path d="M190 96v52h132v-52"/>
+    <path d="M226 96v20h60v-20"/>
+    <path d="M190 416v-52h132v52"/>
+    <path d="M226 416v-20h60v20"/>
+  </g>
+  <!-- Lineup: a four-player diamond -->
+  <g fill="#ffffff" stroke="#1b5e20" stroke-width="6">
+    <circle cx="256" cy="186" r="22"/>
+    <circle cx="186" cy="256" r="22"/>
+    <circle cx="326" cy="256" r="22"/>
+    <circle cx="256" cy="330" r="22"/>
   </g>
 </svg>
